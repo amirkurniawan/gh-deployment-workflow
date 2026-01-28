@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Portfolio - Amir Kurniawan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            margin-bottom: 30px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            border: 1px solid #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #667eea;
+        }
+
+        /* Main Content */
+        .greeting {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .greeting h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .greeting p {
+            color: #a0aec0;
+            font-size: 1.1rem;
+        }
+
+        /* Projects Section */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card p {
+            color: #a0aec0;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .card-link:hover {
+            color: #764ba2;
+        }
+
+        .card-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #a0aec0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .deploy-badge {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #4a5568;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .greeting h2 {
+                font-size: 1.5rem;
+            }
+            
+            header {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="avatar">👨‍💻</div>
+            <h1>Amir Kurniawan</h1>
+            <p class="tagline">DevOps Engineer in Progress</p>
+            <span class="badge">🚀 Learning by Building</span>
+        </header>
+
+        <!-- Greeting -->
+        <div class="greeting">
+            <h2>Hello, GitHub Actions! 👋</h2>
+            <p>This page is automatically deployed using GitHub Actions CI/CD pipeline.</p>
+        </div>
+
+        <!-- Projects Section -->
+        <section>
+            <h2 class="section-title">DevOps Projects</h2>
+
+            <!-- Main Project Card -->
+            <div class="card">
+                <h3>📚 DevOps Labs</h3>
+                <p>
+                    Kumpulan project hands-on untuk belajar DevOps dari dasar sampai production-ready. 
+                    Meliputi Linux, Docker, Kubernetes, CI/CD, Infrastructure as Code, dan Monitoring.
+                </p>
+                <a href="https://github.com/amirkurniawan/devops-labs" class="card-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    View Repository
+                </a>
+            </div>
+
+            <!-- Project List -->
+            <div class="card">
+                <h3>🛠️ Completed Projects</h3>
+                <p>
+                    ✅ Server Performance Stats<br>
+                    ✅ Log Archive Tool<br>
+                    ✅ Nginx Log Analyser<br>
+                    ✅ SSH Remote Server Setup<br>
+                    ✅ Static Site Server (Nginx)<br>
+                    ✅ Basic Monitoring (Netdata)<br>
+                    ✅ Systemd Service<br>
+                    ✅ Basic Dockerfile<br>
+                    ✅ GitHub Actions Deployment (this page!)
+                </p>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="card">
+                <h3>🔧 Tech Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Linux</span>
+                    <span class="tech-badge">Bash</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Kubernetes</span>
+                    <span class="tech-badge">Nginx</span>
+                    <span class="tech-badge">Git</span>
+                    <span class="tech-badge">GitHub Actions</span>
+                    <span class="tech-badge">Jenkins</span>
+                    <span class="tech-badge">Ansible</span>
+                    <span class="tech-badge">Terraform</span>
+                    <span class="tech-badge">Prometheus</span>
+                    <span class="tech-badge">Grafana</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Built with ❤️ | 
+                <a href="https://github.com/amirkurniawan" target="_blank">GitHub</a> | 
+                <a href="https://roadmap.sh/devops" target="_blank">roadmap.sh/devops</a>
+            </p>
+            <p class="deploy-badge">
+                🤖 Auto-deployed via GitHub Actions
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
